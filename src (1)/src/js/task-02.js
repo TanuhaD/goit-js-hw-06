@@ -7,13 +7,11 @@ const ingredients = [
   'Condiments',
 ];
 
-let ul = document.getElementById("ingredients");
+const ingredientsList = document.getElementById("ingredients");
 
-for(let i = 0; i < ingredients.length; i++) {
-  let newLi = document.createElement("li");
-  newLi.innerHTML = ingredients[i];
-  newLi.classList.add("item");
-  newLi.id = ingredients[i];
-  ul.prepend(newLi);
+for(const ingredient of ingredients) {
+  const item =  document.createElement("li");
+  item.textContent = ingredient;
+  ingredientsList.append(item);
 }
 

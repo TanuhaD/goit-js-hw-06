@@ -1,9 +1,14 @@
-let data = []
-$('.item').each(function() {
-    data.push({
-        h2: $(this).find('h2').html(),
-        li_length: $(this).find('li').length
-    })
-})
+// Get node ul#categories
+const categoriesList = document.querySelector("#categories");
 
-console.table(data);
+const categoriesItems = categoriesList.querySelectorAll(".item");
+
+const numberOfCategories = categoriesItems.length;
+console.log(`Number of categories: ${numberOfCategories}`);
+console.log("");
+
+for (const item of categoriesItems) {
+    console.log(`Category: ${item.querySelector("h2").textContent}`);
+    console.log(`Elements: ${item.querySelectorAll("li").length}`);
+    console.log("");
+}
