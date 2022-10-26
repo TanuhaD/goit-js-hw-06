@@ -2,8 +2,9 @@ const input = document.getElementById("name-input");
 const output = document.getElementById('name-output');
 input.addEventListener('input', () => {
     if (input.value === ""){
-        output.innerHTML = "Anonymous";
+        output.innerText = "Anonymous";
     }else {
-        output.innerHTML = input.value;
+        output.innerText = input.value;
     }
 })
+console.dir(input);

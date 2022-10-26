@@ -7,11 +7,11 @@ let counterValue = 0;
 const render = () => {
     value.textContent = counterValue;
 }
-
-increment.addEventListener('click', () => {
+function callbackIncrement() {
     counterValue++;
     render();
-});
+}
+increment.addEventListener('click', callbackIncrement);
 
 decrement.addEventListener('click', () => {
     counterValue--;

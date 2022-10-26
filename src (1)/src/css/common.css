@@ -23,9 +23,12 @@ button {
   cursor: pointer;
 }
 .img_task3 {
-  width: 300px;
+  height: 200px;
+  max-width: 300px;
   border-radius: 5px;
 }
 .gallery {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
 }
