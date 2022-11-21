@@ -1,22 +1,18 @@
-let value = document.getElementById("value");
-let increment = document.getElementById("increment");
-let decrement = document.getElementById("decrement");
+let value = document.getElementById('value');
+let increment = document.getElementById('increment');
+let decrement = document.getElementById('decrement');
 
 let counterValue = 0;
 
-const render = () => {
-    value.textContent = counterValue;
+function handleIncClick() {
+  counterValue += 1;
+  value.textContent = counterValue;
 }
-function callbackIncrement() {
-    counterValue++;
-    render();
+function handleDecClick() {
+  counterValue -= 1;
+  value.textContent = counterValue;
 }
-increment.addEventListener('click', callbackIncrement);
+value.textContent = counterValue;
 
-decrement.addEventListener('click', () => {
-    counterValue--;
-    render();
-});
-
-render();
-
+increment.addEventListener('click', handleIncClick);
+decrement.addEventListener('click', handleDecClick);

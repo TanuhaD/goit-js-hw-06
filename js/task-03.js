@@ -13,9 +13,11 @@ const images = [
   },
 ];
 
-const ul = document.querySelector(".gallery");
-let markup = '';
-for (const {url, alt} of images) {
-  markup += `<li><img src="${url}" alt="${alt}" class="img_task3"></li>`;
-}
-ul.insertAdjacentHTML("afterbegin",markup)
+const ulEl = document.querySelector('.gallery');
+
+let markup = images
+  .map(({ url, alt }) => {
+    return `<li><img src="${url}" alt="${alt}"></li>`;
+  })
+  .join('');
+ulEl.innerHTML = markup;
